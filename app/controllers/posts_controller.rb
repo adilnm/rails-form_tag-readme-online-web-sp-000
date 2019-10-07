@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    raise params.inspect
     Post.create(title: params[:post][:title], description: params[:post][:description])
     redirect_to posts_path
   end
